@@ -1,0 +1,161 @@
+
+
+
+
+
+//SideBar
+*{
+  list-style: none;
+  text-decoration: none !important;
+}
+
+.social ul li {
+  padding: 40px 10px;
+  display: inline-block;
+  margin-bottom: 1px;
+  text-align: center;
+
+  width:2rem;
+}
+
+.social ul li a{
+  text-decoration:none !important;
+   color: white;
+}
+.wrapper{
+  display:flex;
+  width: 100%;
+}
+.wrapper .sidebar{
+  position: relative;
+  font-family: 'Work Sans', sans-serif;
+}
+.wrapper .sidebar .sidebar_inner{
+  width :250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color:#161c21;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.main_container{
+
+  margin-left:250px;
+  width: calc(100%-250px);
+    transition: all 0.3s ease;
+}
+.wrapper .sidebar_inner .profile_info{
+  padding: 30px 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar_inner .profile_info .profile_img{
+  width: 100px;
+  margin:0 auto 15px;
+}
+.wrapper .sidebar_inner .profile_info .profile_img img{
+  width: 100%;
+  display: block;
+}
+.wrapper .sidebar_inner .profile_info .profile_data .name{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.wrapper .sidebar_inner .profile_info .profile_data .role{
+  font-weight: 300;
+  color:#88a3d0;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+
+
+.wrapper .main_container .top_navbar{
+  width: calc(100% - 250px);
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.wrapper .main_container .top_navbar .hamburger{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: none;
+
+}
+
+.wrapper .sidebar_menu{
+  padding-left: 0;
+}
+.wrapper .main_container .top_navbar .hamburger .fa-bars{
+  color:white !important;
+  font-size:25px;
+  cursor: pointer;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,9%);
+}
+.wrapper .main_container .top_navbar .hamburger .fa-bars:hover{
+  opacity:0.5;
+}
+
+.wrapper .close{
+  position: absolute;
+  top:5px;
+  right:15px;
+  font-size:20px;
+  color: #fff;
+  cursor: pointer;
+display: none;
+}
+
+.wrapper .close:hover{
+  opacity: 0.5;
+}
+
+@media screen and (max-width:800px){
+  .wrapper .sidebar .sidebar_inner{
+    left:-100%;
+
+  }
+  .wrapper .main_container,
+  .wrapper .main_container .top_navbar {
+    width: 100%;
+    margin-left:0;
+z-index: 800;
+  }
+  .wrapper .main_container .top_navbar{
+    left:0;
+  }
+  .wrapper .main_container .top_navbar .hamburger,
+  .wrapper .close {
+    display: block;
+    z-index: 1000;
+
+  }
+  .wrapper.active .sidebar_inner{
+    left:0;
+    z-index: 999;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
